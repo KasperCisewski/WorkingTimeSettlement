@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WorkingTimeSettlement.Models;
 
 namespace WorkingTimeSettlement.Services
 {
@@ -8,19 +9,29 @@ namespace WorkingTimeSettlement.Services
     {
         public string FilePath { get; set; }
 
-        public DayRepository()
+        public DayRepository(string filePath)
         {
-                
+            FilePath = filePath;
         }
 
-        public void SaveDay()
+        public void SaveDay(WorkingDay workingDay)
         {
 
         }
 
-        public void ModifyDay()
+        public void ModifyDay(WorkingDay workingDay)
         {
 
+        }
+
+        public WorkingDay GetWorkingDay()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollection<WorkingDay> GetAllWorkingDays()
+        {
+            throw new NotImplementedException();
         }
     }
 }

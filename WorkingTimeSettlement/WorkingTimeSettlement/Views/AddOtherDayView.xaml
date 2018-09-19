@@ -4,9 +4,22 @@
              x:Class="WorkingTimeSettlement.Views.AddOtherDayView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Pick day"/>
+            <DatePicker MinimumDate="{Binding MinimalDate}" MaximumDate="{Binding MaximalDate}" Date="{Binding SelectedDate}"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Start Time"/>
+                <Entry x:Name="StartTimeEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ends Time"/>
+                <Entry x:Name="EndTimeEntry"/>
+                <Label Text="Break )"/>
+                <Entry x:Name="BreakTimeEntry"/>
+            </StackLayout>
+            <Label Text="Description tasks"/>
+            <Editor x:Name="EditorDescription" HeightRequest="60"/>
+            <Button x:Name="SaveDay" Clicked="SaveDay_OnClicked" Text="Save" FontSize="14" />
+            <Label Text="Use Template {Hours:Minutes} for fill time" VerticalOptions="EndAndExpand" FontSize="10" FontAttributes="Bold"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

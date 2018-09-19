@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WorkingTimeSettlement.ViewModels
 {
-    class AllDaysViewModel
+    public class AllDaysViewModel
     {
     }
 }
