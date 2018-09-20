@@ -35,7 +35,7 @@ namespace WorkingTimeSettlement.ViewModels
                 throw;
             }
 
-            MessageForUser = App.SettlementService.DayValidator;
+            MessageForUser = App.SettlementService.CheckAndAddToRepository(workingDay);
 
         }
     }

@@ -8,11 +8,12 @@ namespace WorkingTimeSettlement.Services
     {
         public DayValidator()
         {
+          
+        }
+        public bool IsTimeCorrectlySaved()
+        {
 
-            public bool IsTimeCorrectlySaved()
-            {
-
-            }
+            return true;
         }
     }
 }
