@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WorkingTimeSettlement.Models;
+using WorkingTimeSettlement.Services;
 
 namespace WorkingTimeSettlement.ViewModels
 {
@@ -21,7 +23,20 @@ namespace WorkingTimeSettlement.ViewModels
 
         public void TryToSaveWorkingTimeToRepository(object sender)
         {
-            throw new NotImplementedException();
+            WorkingDay workingDay;
+            try
+            {
+                 workingDay = (WorkingDay) sender;
+            }
+            catch (Exception e)
+            {
+                MessageForUser = "Something was wrong";
+                Console.WriteLine(e);
+                throw;
+            }
+
+            MessageForUser = App.SettlementService.DayValidator;
+
         }
     }
 }

@@ -1,17 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SQLite;
+using SQLitePCL;
 using WorkingTimeSettlement.Models;
+using Xamarin.Forms;
 
 namespace WorkingTimeSettlement.Services
 {
-    public class DayRepository
+    public class DayRepository : IDayRepository
     {
-        public string FilePath { get; set; }
 
-        public DayRepository(string filePath)
+        private SQLiteConnection database;
+
+        private static object locker = new object();
+
+        public DayRepository()
         {
-            FilePath = filePath;
+            database = DependencyService.Get<ISQLite>().GetConnection();
+            database.CreateTable<WorkingDay>();
         }
 
         public void SaveDay(WorkingDay workingDay)

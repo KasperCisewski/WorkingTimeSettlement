@@ -17,6 +17,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\WorkingDay.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DayRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DayValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDayRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\WorkingTimeSettlementService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOtherDayViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AllDaysViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TodayViewModel.cs" />

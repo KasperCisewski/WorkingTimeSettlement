@@ -21,7 +21,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:AddOtherDayView />
+                <views:AddOtherDayView/>
             </x:Arguments>
         </NavigationPage>
         <NavigationPage Title="All Days">
@@ -31,7 +31,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:AllDaysView />
+                <views:AllDaysView  />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
