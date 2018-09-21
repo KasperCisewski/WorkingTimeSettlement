@@ -16,6 +16,18 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\WorkingDay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DayRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DayValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDayRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\WorkingTimeSettlementService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddOtherDayViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AllDaysViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TodayViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AddOtherDayView.xaml.cs">
+      <DependentUpon>AddOtherDayView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\AllDaysView.xaml.cs">
       <DependentUpon>AllDaysView.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -36,10 +48,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TodayView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -47,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AllDaysView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AddOtherDayView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
