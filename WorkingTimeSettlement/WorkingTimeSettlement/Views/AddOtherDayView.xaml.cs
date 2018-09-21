@@ -23,7 +23,7 @@ namespace WorkingTimeSettlement.Views
 
 	    private void SaveDay_OnClicked(object sender, EventArgs e)
 	    {
-	        vm.TryToSaveWorkingTimeToRepository(sender);
+	        vm.TryToSaveWorkingTimeToRepository();
 	        DisplayAlert("Allert", vm.MessageForUser, "ok");
 
 	    }

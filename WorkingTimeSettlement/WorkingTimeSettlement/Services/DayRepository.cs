@@ -23,7 +23,12 @@ namespace WorkingTimeSettlement.Services
 
         public void SaveDay(WorkingDay workingDay)
         {
+            database.CreateTable<WorkingDay>();
 
+            lock (locker)
+            {
+                database.Insert(workingDay);
+            }
         }
 
         public void ModifyDay(WorkingDay workingDay)
